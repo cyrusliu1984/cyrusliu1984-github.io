@@ -1,8 +1,898 @@
-<p>Hello 大家好</p>
-<p>我是霸都丶傲天，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE HTML>
+<html lang="en">
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/AJLoveChina">知乎</a> </li>
-  <li> <a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了,现在在知乎写文章)</a> </li>
-</ul>
+<!-- head -->
+
+<head>
+  <script>
+    (function () {
+      var a_idx = 0;
+      window.onclick = function (event) {
+        var a = new Array("✨", "🤖", "🥳", "👋", "🦾", "🐽");
+
+        var heart = document.createElement("b");
+        heart.onselectstart = new Function('event.returnValue=false');
+
+        document.body.appendChild(heart).innerHTML = a[a_idx];
+        a_idx = (a_idx + 1) % a.length;
+        heart.style.cssText = "position: fixed;left:-100%;";
+
+        var f = 16,
+          x = event.clientX - f / 2,
+          y = event.clientY - f,
+          c = randomColor(),
+          a = 1,
+          s = 1.2;
+
+        var timer = setInterval(function () {
+          if (a <= 0) {
+            document.body.removeChild(heart);
+            clearInterval(timer);
+          } else {
+            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+              c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+              s + ");";
+
+            y--;
+            a -= 0.016;
+            s += 0.002;
+          }
+        }, 15);
+
+      }
+      function randomColor() {
+        return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+          .random() * 255)) + ")";
+      }
+
+      // Add the copyBibTeX function
+      window.copyBibTeX = function (button) {
+        const bibtexContent = button.getAttribute("data-bibtex");
+        const copySuccess = button.nextElementSibling;
+
+        // Create a temporary textarea element to hold the text
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = bibtexContent;
+        document.body.appendChild(tempTextarea);
+
+        // Select and copy the text
+        tempTextarea.select();
+        document.execCommand("copy");
+
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextarea);
+
+        // Show success message
+        copySuccess.style.display = "inline";
+        setTimeout(() => {
+          copySuccess.style.display = "none";
+        }, 2000);
+      }
+
+    }());
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-66DNLPJ6PY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-66DNLPJ6PY');
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>cyruliu | 刘小川</title>
+
+  <meta name="author" content="Enshen Zhou">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Enshen Zhou's personal website.">
+  <meta name="keywords" content="Enshen Zhou, 周恩申, zhouenshen">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- <link rel="icon" type="image/png" href="images/logo/icon.png" sizes="64x64"> -->
+<style>
+  @media (max-width: 768px) {
+    tr {
+      display: block;
+    }
+
+    tr td {
+      display: block;
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+
+    .one {
+      max-width: 100%;
+    }
+
+    .one img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+</head>
+
+<!-- bib hide -->
+<script type="text/javascript">
+  function hideshow(which) {
+    if (!document.getElementById)
+      return
+    if (which.style.display == "block")
+      which.style.display = "none"
+    else
+      which.style.display = "block"
+  }
+</script>
+
+<!-- body -->
+
+<body>
+  <!-- self-intro -->
+  <table
+    style="width:100%;max-width:930px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2%;width:40%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Enshen Zhou | 周恩申</name>
+                  </p>
+                  <p style="text-align: justify">
+                    <intro>
+                      I am a first-year Master's student at the <a href="http://soft.buaa.edu.cn/"
+                        target="_blank">School of Software, Beihang University (BUAA)</a>, supervised by Prof. <a
+                        href="https://lucassheng.github.io/" target="_blank">Lu Sheng</a>.
+
+                      Previously, I also received my Bachelor's degree from the same institution in 2024.
+
+                      During my internships at <a href="https://www.shlab.org.cn/" target="_blank">Shanghai AI Lab</a>,
+                      <a href="https://www.galbot.com/" target="_blank">Galbot</a>, 
+                      and <a href="https://www.baai.ac.cn/" target="_blank">BAAI</a>,
+                      I was honored to be advised by Prof. <a href="https://amandajshao.github.io/" target="_blank">Jing
+                        Shao</a>, Prof. <a href="https://hughw19.github.io/" target="_blank">He Wang</a>,
+                        and Prof. <a href="https://www.shanghangzhang.com/" target="_blank">Shanghang Zhang</a>, respectively.
+                        <em><b><span style="color: #fba524;">I'm always open to collaboration or a good discussion — feel free to contact me via Email or WeChat!</span></b></em>
+                      
+                    </intro>
+                  
+                  <p style="text-align:center">
+                    <a href="mailto:zhouenshen@buaa.edu.cn" target="_blank">Email</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com/citations?user=8Wd7-NAAAAAJ" target="_blank">Google Scholar</a>
+                    &nbsp/&nbsp
+                    <a href="https://github.com/zhoues/" target="_blank">GitHub</a>&nbsp/&nbsp
+                    <a href="images/photo/wechat.jpg" target="_blank">WeChat</a>
+                  </p>
+                </td>
+                <td style="padding:0%; width:26%; max-width:26%;">
+                  <br>
+                  <div style="width:100%; max-width:90%; margin: 0 auto; text-align: center;">
+                    <img
+                      style="width:100%; display: block; margin: 0 auto; padding: 1%;"
+                      alt="profile photo"
+                      src="images/photo/my_photo.jpg"
+                      class="hoverZoomLink"
+                    />
+                    <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fzhoues.github.io">
+                      <img
+                        src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fzhoues.github.io&labelColor=%232ccce4&countColor=%230158f9"
+                        alt="visitor badge"
+                        style="margin-top: 8px;"
+                      />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- News -->
+  <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+
+      <!-- <br> -->
+      <heading>News</heading>
+      <br>
+      <!-- <td style="padding:0px;width:100%;vertical-align:middle"> -->
+        <p>
+          <li>
+            [2025/06]🎉 <a href="https://sites.google.com/view/minedreamer/main" target="_blank">MineDreamer</a> and 
+            <a href="https://sites.google.com/view/rh20t-primitive/main" target="_blank">RH20T-P</a> are both selected as <em><b><span style="color: #FF0000;">Oral Presentation</span></b></em> in IROS 2025!
+            See you in Hangzhou, China!
+          </li>
+          <li>
+            [2025/05]🎉 <a href="https://iranqin.github.io/WorldSimBench.github.io/" target="_blank">WorldSimBench</a> gets accepted to <a
+              href="https://icml.cc/Conferences/2025" target="_blank">ICML 2025</a> and selected as <em><b><span style="color: #FF0000;">Oral Presentation</span></b></em> in CVPR 2025 @ WorldModelBench!
+          </li>
+          <li>
+            [2025/02]🎉 <a href="https://zhoues.github.io/Code-as-Monitor/" target="_blank">Code-as-Monitor</a> is accepted at <a
+              href="https://cvpr.thecvf.com/Conferences/2025" target="_blank">CVPR 2025</a>! Come on to see our demos!
+          </li>
+          <li>
+            [2024/12]🎉 <a href="https://anjingkun.github.io/AGFSync/" target="_blank">AGFSync</a> gets accepted to <a
+              href="https://aaai.org/conference/aaai/aaai-25/" target="_blank">AAAI 2025</a>! See you in Philadelphia, USA!
+          </li>
+
+          <li>
+            [2024/05]🎉 Honored to organize two workshop (<a href="https://icml-tifa.github.io/"
+              target="_blank">TiFA</a>, <a href="https://icml-mfm-eai.github.io/" target="_blank">MFM-EAI</a>) challenge
+            in <a href="https://icml.cc/Conferences/2024" target="_blank">ICML 2024</a>!
+          </li>
+
+          <li>
+            [2024/02]🎉 <a href="https://iranqin.github.io/MP5.github.io/" target="_blank">MP5</a> is accepted at <a
+              href="https://cvpr.thecvf.com/Conferences/2024" target="_blank">CVPR 2024</a>! Please check out the demos
+            in our webpage!
+          </li>
+        </p>
+      <!-- </td> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Selected Research -->
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <br>
+      <heading>Publications</heading> ( *, †, ‡ indicates the equal contributions, corresponding author, project leader, respectively.)
+      <br>
+      <p>
+        Currently, my interest lies in <b>Embodied Agents</b>,
+        which are at the intersection of Multimodal Large Language Models and Embodied AI,
+        with particular interests in high-level planning and low-level control with <b>spatio-temporal intelligence</b>,
+        working towards an generalist agent in a complex real-world environment.
+
+        Representative works are <span class="highlight">highlighted</span>.
+        
+      </p>
+
+      <!-- RoboRefer -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()" bgcolor="#ffffdc">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/neurips25_roborefer.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/neurips25_roborefer.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://zhoues.github.io/RoboRefer/" target="_blank">
+            <papertitle>RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          <a:focus><b>Enshen Zhou *</b></a:focus>,
+          <a class="a2" href="https://scholar.google.com/citations?user=gtoavQoAAAAJ" target="_blank">Jingkun An *</a>,
+          <a class="a2" href="https://chicheng123.github.io/" target="_blank">Cheng Chi *<sup>‡</sup></a>,
+          <a class="a2" href="https://github.com/hany01rye" target="_blank">Yi Han</a>,
+          <a class="a2" href="https://rainfallsdown.github.io/" target="_blank">Shanyu Rong</a>,
+          <a class="a2" href="https://github.com/AibohDij" target="_blank">Chi Zhang</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=2xR6P5AAAAAJ" target="_blank">Pengwei Wang</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=4XVJrRAAAAAJ" target="_blank">Zhongyuan Wang</a>,
+          <a class="a2" href="https://scholar.google.com.tw/citations?user=knvEK4AAAAAJ" target="_blank">Tiejun
+            Huang</a>,
+          <a class="a2" href="https://lucassheng.github.io/" target="_blank">Lu Sheng<sup>†</sup></a>,
+          <a class="a2" href="https://www.shanghangzhang.com/" target="_blank">Shanghang Zhang<sup>†</sup></a>
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2506.04308">Paper</a> /
+          <a class="a1" href="https://zhoues.github.io/RoboRefer/">Project</a> /
+          <!-- <a class="a1" href="https://www.bilibili.com/video/BV1YXQRY2EHk">BiilBili Video</a> / -->
+          <a class="a1" href="https://github.com/Zhoues/RoboRefer">Code</a> /
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@article{zhou2025roborefer,
+    title={RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics},
+    author={Zhou, Enshen and An, Jingkun and Chi, Cheng and Han, Yi and Rong, Shanyu and Zhang, Chi and Wang, Pengwei and Wang, Zhongyuan and Huang, Tiejun and Sheng, Lu and others},
+    journal={arXiv preprint arXiv:2506.04308},
+    year={2025}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+          <spacer></spacer>
+          <em>TL;DR: From words to exactly where you mean using RoboRefer!</em>
+          <br>
+          <spacer></spacer>
+          <em><b>Arxiv 2025</b></em>
+        </td>
+      </tr>
+
+      <!-- Code-as-Monitor -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()" bgcolor="#ffffdc">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/cvpr25_cam.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/cvpr25_cam.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://zhoues.github.io/Code-as-Monitor/" target="_blank">
+            <papertitle>Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure
+              Detection
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          <a:focus><b>Enshen Zhou *</b></a:focus>,
+          <a class="a2" href="https://github.com/QiSu77" target="_blank">Qi Su *</a>,
+          <a class="a2" href="https://chicheng123.github.io/" target="_blank">Cheng Chi *<sup>†</sup></a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ" target="_blank">Zhizheng
+            Zhang</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=4XVJrRAAAAAJ" target="_blank">Zhongyuan
+            Wang</a>,
+          <a class="a2" href="https://scholar.google.com.tw/citations?user=knvEK4AAAAAJ" target="_blank">Tiejun
+            Huang</a>,
+          <a class="a2" href="https://lucassheng.github.io/" target="_blank">Lu Sheng<sup>†</sup></a>,
+          <a class="a2" href="https://hughw19.github.io/" target="_blank">He Wang<sup>†</sup></a>
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2412.04455">Paper</a> /
+          <a class="a1" href="https://zhoues.github.io/Code-as-Monitor/">Project</a> /
+          <a class="a1" href="https://www.bilibili.com/video/BV1YXQRY2EHk">BiilBili Video</a> /
+          <!-- <a class="a1" href="https://github.com/Zhoues/MineDreamer">Code</a> / -->
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@article{zhou2024code,
+        title={Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection},
+        author={Zhou, Enshen and Su, Qi and Chi, Cheng and Zhang, Zhizheng and Wang, Zhongyuan and Huang, Tiejun and Sheng, Lu and Wang, He},
+        journal={arXiv preprint arXiv:2412.04455},
+        year={2024}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+          <spacer></spacer>
+          <em>TL;DR: Enjoy Open-world Failure Detection with Real-time high precision!</em>
+          <br>
+          <spacer></spacer>
+          <em><b>CVPR 2025</b></em>
+        </td>
+      </tr>
+
+
+      <!-- WorldSimBench -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/icml25_worldsimbench.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/icml25_worldsimbench.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://iranqin.github.io/WorldSimBench.github.io/" target="_blank">
+            <papertitle>WorldSimBench: Towards Video Generation Models as World Simulators
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          <a class="a2" href="https://github.com/IranQin" target="_blank">Yinran Qin *</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=EDLcoVkAAAAJ" target="_blank">Zhelun Shi *</a>,
+          <a class="a2" href="https://vvictoryuki.github.io/website/" target="_blank">Jiwen Yu</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=ccQh444AAAAJ" target="_blank">Xijun Wang</a>,
+          <a:focus><b>Enshen Zhou</b></a:focus>,
+          <a class="a2" href="https://scholar.google.com/citations?user=394j5K4AAAAJ" target="_blank">Lijun Li</a>,
+          <a class="a2" href="https://yinzhenfei.github.io/" target="_blank">Zhenfei Yin<sup>‡</sup></a>,
+          <a class="a2" href="https://xh-liu.github.io/" target="_blank">Xihui Liu</a>,
+          <a class="a2" href="https://lucassheng.github.io/" target="_blank">Lu Sheng</a>,
+          <a class="a2" href="https://amandajshao.github.io/" target="_blank">Jing Shao<sup>†</sup></a>
+          <a class="a2" href="http://leibai.site/" target="_blank">Lei Bai</a>,
+          <a class="a2" href="https://wlouyang.github.io/saved_resource.htm" target="_blank">Wanli Ouyang</a>,
+          <a class="a2" href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang<sup>†</sup></a>
+          <spacer></spacer>
+          <em>TL;DR: Evalute Video Generation Models as World Simulators!</em>
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2410.18072">Paper</a> /
+          <a class="a1" href="https://iranqin.github.io/WorldSimBench.github.io/">Project</a> /
+          <!-- <a class="a1" href="https://github.com/IranQin/MP5">Code</a> / -->
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@article{qin2024worldsimbench,
+        title={Worldsimbench: Towards video generation models as world simulators},
+        author={Qin, Yiran and Shi, Zhelun and Yu, Jiwen and Wang, Xijun and Zhou, Enshen and Li, Lijun and Yin,
+        Zhenfei and Liu, Xihui and Sheng, Lu and Shao, Jing and others},
+        journal={arXiv preprint arXiv:2410.18072},
+        year={2024}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+
+          <br>
+          <spacer></spacer>
+          <em><b>ICML 2025</b></em>
+          <br>
+          <em><b>CVPR 2025 @ WorldModelBench, <span style="color: #FF0000;">Oral Presentation</span></b></em>
+        </td>
+      </tr>
+
+
+      <!-- AGFSync -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/aaai25_agfsync.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/aaai25_agfsync.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://anjingkun.github.io/AGFSync/" target="_blank">
+            <papertitle>AGFSync: Leveraging AI-Generated Feedback for Preference Optimization in Text-to-Image
+              Generation
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          <a class="a2" href="https://scholar.google.com/citations?user=gtoavQoAAAAJ" target="_blank">Jingkun An *</a>,
+          <a class="a2" href="https://yhzhu99.github.io/" target="_blank">Yinghao Zhu *</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=_TT3r1cAAAAJ" target="_blank">Zongjian Li*</a>,
+          <a:focus><b>Enshen Zhou</b></a:focus>,
+          <a class="a2" href="https://github.com/DHUAVY" target="_blank">Haoran Feng</a>,
+          <a class="a2" href="https://jeixhuang.github.io/" target="_blank">Xijie Huang</a>,
+          <a class="a2" href="https://scholar.google.com/citations?hl=en&user=Sg5OGswAAAAJ" target="_blank">Bohua
+            Chen</a>,
+          <a class="a2" href="https://dse.pku.edu.cn/rcpy/bfxy/75727fad141c413aaf740c57aa411751.htm"
+            target="_blank">Yemin Shi</a>,
+          <a class="a2" href="https://iai.buaa.edu.cn/info/1013/1123.htm" target="_blank">Chengwei Pan<sup>†</sup></a>
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2403.13352">Paper</a> /
+          <a class="a1" href="https://anjingkun.github.io/AGFSync/">Project</a> /
+          <a class="a1" href="https://github.com/Anjingkun/AGFSync">Code</a> /
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@article{an2024agfsync,
+        title={AGFSync: Leveraging AI-Generated Feedback for Preference Optimization in Text-to-Image Generation},
+        author={An, Jingkun and Zhu, Yinghao and Li, Zongjian and Feng, Haoran and Chen, Bohua and Shi, Yemin and
+        Pan, Chengwei},
+        journal={arXiv preprint arXiv:2403.13352},
+        year={2024}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+          <spacer></spacer>
+          <em>TL;DR: Train T2I Diffusion model with AI-Generated Feedback for DPO!</em>
+          <br>
+          <spacer></spacer>
+          <em><b>AAAI 2025</b></em>
+        </td>
+      </tr>
+
+      <!-- RH20T-P -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/eccv24_rh20tp.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/eccv24_rh20tp.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://sites.google.com/view/rh20t-primitive/main" target="_blank">
+            <papertitle>RH20T-P: A Primitive-Level Robotic Manipulation Dataset towards Composable Generalization Agents in Real-world Scenarios
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          
+          <a class="a2" href="https://scholar.google.com/citations?user=fdDOA-0AAAAJ" target="_blank">Zeren Chen *</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=EDLcoVkAAAAJ" target="_blank">Zhelun Shi *</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=7lhCpMoAAAAJ" target="_blank">Xiaoya Lu *</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=vWYG3zIAAAAJ" target="_blank">Lehan He *</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=M1uN-MEAAAAJ" target="_blank">Sucheng Qian</a>,
+          <a:focus><b>Enshen Zhou</b></a:focus>,
+          <a class="a2" href="https://yinzhenfei.github.io/" target="_blank">Zhenfei Yin</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=pw_0Z_UAAAAJ" target="_blank">Wanli Ouyang</a>,
+          <a class="a2" href="https://amandajshao.github.io/" target="_blank">Jing Shao<sup>†</sup></a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">Yu Qiao</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=QZVQEWAAAAAJ" target="_blank">Cewu Lu<sup>†</sup></a>,
+          <a class="a2" href="https://lucassheng.github.io/" target="_blank">Lu Sheng<sup>†</sup></a>,
+
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2403.19622">Paper</a> /
+          <a class="a1" href="https://sites.google.com/view/rh20t-primitive/main">Project</a> /
+          <a class="a1" href="https://github.com/Zx55/cga-challenge/tree/main/data/rh20tp">Code</a> /
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@article{chen2024rh20t,
+        title={Rh20t-p: A primitive-level robotic dataset towards composable generalization agents},
+        author={Chen, Zeren and Shi, Zhelun and Lu, Xiaoya and He, Lehan and Qian, Sucheng and Yin, Zhenfei and Ouyang, Wanli and Shao, Jing and Qiao, Yu and Lu, Cewu and others},
+        journal={arXiv preprint arXiv:2403.19622},
+        year={2024}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+          <spacer></spacer>
+          <em>TL;DR: Create your composable generalized agent using Rh20t-p dataset!</em>
+          <br>
+          <spacer></spacer>
+          <em><b>IROS 2025, <span style="color: #FF0000;">Oral Presentation</span></b></em>
+          <br>
+          <em><b>NeurIPS 2024 @ OWA</b></em>
+        </td>
+      </tr>
+
+  
+      <!-- MineDreamer -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()" bgcolor="#ffffdc">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/eccv24_minedreamer.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/eccv24_minedreamer.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://sites.google.com/view/minedreamer/main" target="_blank">
+            <papertitle>MineDreamer: Learning to Follow Instructions via Chain-of-Imagination for Simulated-World
+              Control
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          <a:focus><b>Enshen Zhou *</b></a:focus>,
+          <a class="a2" href="https://github.com/IranQin" target="_blank">Yinran Qin *</a>,
+          <a class="a2" href="https://yinzhenfei.github.io/" target="_blank">Zhenfei Yin</a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=9dMnmMwAAAAJ" target="_blank">Yuzhou Huang</a>,
+          <a class="a2" href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang<sup>†</sup></a>,
+          <a class="a2" href="https://lucassheng.github.io/" target="_blank">Lu Sheng<sup>†</sup></a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">Yu Qiao</a>,
+          <a class="a2" href="https://amandajshao.github.io/" target="_blank">Jing Shao<sup>‡</sup></a>
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2403.12037">Paper</a> /
+          <a class="a1" href="https://sites.google.com/view/minedreamer/main">Project</a> /
+          <a class="a1" href="https://github.com/Zhoues/MineDreamer">Code</a> /
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@article{zhou2024minedreamer,
+        title={Minedreamer: Learning to follow instructions via chain-of-imagination for simulated-world control},
+        author={Zhou, Enshen and Qin, Yiran and Yin, Zhenfei and Huang, Yuzhou and Zhang, Ruimao and Sheng, Lu and
+        Qiao, Yu and Shao, Jing},
+        journal={arXiv preprint arXiv:2403.12037},
+        year={2024}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+          <spacer></spacer>
+          <em>TL;DR: Use Imagination to Guide agent itself How to Act step-by-step!</em>
+          <br>
+          <spacer></spacer>
+          <em><b>IROS 2025, <span style="color: #FF0000;">Oral Presentation</span></b></em>
+          <br>
+          <em><b>NeurIPS 2024 @ OWA</b></em>
+        </td>
+      </tr>
+
+      <!-- MP5 -->
+      <tr onmouseout="malle_stop()" onmouseover="malle_start()" bgcolor="#ffffdc">
+        <td style="padding:20px;width:40%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <!-- <br> -->
+              <img src='images/publication_preview/cvpr24_mp5.png' width="325">
+            </div>
+            <!-- <br> -->
+            <img src='images/publication_preview/cvpr24_mp5.png' width="325">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:65%;vertical-align:middle">
+          <a href="https://iranqin.github.io/MP5.github.io/" target="_blank">
+            <papertitle>MP5: A Multi-modal Open-ended Embodied System in Minecraft via Active Perception
+            </papertitle>
+          </a>
+          <br>
+          <spacer></spacer>
+          <a class="a2" href="https://github.com/IranQin" target="_blank">Yinran Qin *</a>,
+          <a:focus><b>Enshen Zhou *</b></a:focus>,
+          <a class="a2" href="https://github.com/glimmer2004" target="_blank">Qichang Liu *</a>,
+          <a class="a2" href="https://yinzhenfei.github.io/" target="_blank">Zhenfei Yin</a>,
+          <a class="a2" href="https://lucassheng.github.io/" target="_blank">Lu Sheng<sup>†</sup></a>,
+          <a class="a2" href="http://www.zhangruimao.site/" target="_blank">Ruimao Zhang<sup>†</sup></a>,
+          <a class="a2" href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">Yu Qiao</a>,
+          <a class="a2" href="https://amandajshao.github.io/" target="_blank">Jing Shao<sup>‡</sup></a>
+          <br>
+          <spacer></spacer>
+          <a class="a1" href="https://arxiv.org/abs/2312.07472">Paper</a> /
+          <a class="a1" href="https://iranqin.github.io/MP5.github.io/">Project</a> /
+          <a class="a1" href="https://www.bilibili.com/video/BV1ieHmerEJF">BiilBili Video</a> /
+          <a class="a1" href="https://github.com/IranQin/MP5">Code</a> /
+
+          <a class="a1">
+            <span class="copy-text" data-bibtex="
+@inproceedings{qin2024mp5,
+        title={MP5: A Multi-modal Open-ended Embodied System in Minecraft via Active Perception},
+        author={Qin, Yiran and Zhou, Enshen and Liu, Qichang and Yin, Zhenfei and Sheng, Lu and Zhang, Ruimao and
+        Qiao, Yu and Shao, Jing},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        pages={16307--16316},
+        year={2024}
+}
+            " onclick="copyBibTeX(this)">Copy BibTeX</span>
+            <span class="copy-success">Copy Success!</span>
+          </a>
+          <spacer></spacer>
+          <em>TL;DR: Multi-Agent System can Solve Endless Open-ended Long-horizion tasks!</em>
+          <br>
+          <spacer></spacer>
+          <em><b>CVPR 2024</b></em>
+        </td>
+      </tr>
+
+
+      <!-- Services -->
+      <table
+        style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+          <tr>
+            <br>
+            <heading>Services</heading>
+            <br>
+            <td style="padding:0px;width:100%;vertical-align:middle">
+              <p>
+                <li>Workshop Challenge Organizer:</li>
+              <ul>
+                <li>Trustworthy Multi-modal Foundation Models and AI Agents (<a href="https://icml-tifa.github.io/"
+                    target="_blank">TiFA</a>) in ICML 2024.</li>
+                <li>Multi-modal Foundation Model meets Embodied AI (<a href="https://icml-mfm-eai.github.io/"
+                    target="_blank">MFM-EAI</a>) in ICML 2024.</li>
+              </ul>
+              </p>
+              <p>
+                <li>Reviewer: CVPR</li>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Experience -->
+      <table width="100%" align="center" border="0" cellpadding="10">
+        <tbody>
+          <br>
+          <heading>Experience</heading>
+          <tr>
+            <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img
+                src="images/logo/baai_logo.jpg" , width="120"></td>
+            <td width="90%" valign="center">
+              <b><a href="https://research.nvidia.com/labs/gear/" target="_blank">
+                  <papertitle>Beijing Academy of Artificial Intelligence (BAAI)</papertitle>
+                </a></b>
+              <br> <em>2025.1 - present</em>
+              <br> <b>Research Intern</b>
+              <br> Research Advisor: Dr. <a href="https://chicheng123.github.io/" target="_blank">Cheng Chi</a>, Prof.
+              <a href="https://www.shanghangzhang.com/" target="_blank">Shanghang Zhang</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle;"><img
+                src="images/logo/galbot_logo.png" , width="130"></td>
+            <td width="90%" valign="center">
+              <b><a href="https://www.galbot.com/" target="_blank">
+                  <papertitle>Galbot</papertitle>
+                </a></b>
+              <br> <em>2024.8 - 2024.12</em>
+              <br> <b>Research Intern</b>
+              <br> Research Advisor: Dr. <a href="https://chicheng123.github.io/" target="_blank">Cheng Chi</a>, Dr. <a
+                href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ" target="_blank">Zhizheng Zhang</a>, Prof.
+              <a href="https://hughw19.github.io/" target="_blank">He Wang</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding-left:27px;padding-right:20px;width:20%;vertical-align:middle"><img
+                src="images/logo/shlab_logo.jpg" , width="120"></td>
+            <td width="90%" valign="center">
+              <b><a href="www.shlab.org.cn" target="_blank">
+                  <papertitle>Shanghai AI Lab</papertitle>
+                </a></b>
+              <br> <em>2023.8 - 2024.8</em>
+              <br> <b>Research Intern</b>
+              <br> Research Advisor: Prof. <a href="https://amandajshao.github.io/" target="_blank">Jing Shao</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table width="100%" align="center" border="0" cellpadding="10">
+        <tbody>
+          <br>
+          <heading>Education</heading>
+          <tr>
+            <br>
+            <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img
+                src="images/logo/buaa_logo.jpg" , width="120"></td>
+            <td width="90%" valign="center">
+              <b><a href="https://soft.buaa.edu.cn/" target="_blank">
+                  <papertitle>Beihang University (BUAA)</papertitle>
+                </a></b>
+              <br> <em>2024.09 - present</em>
+              <br> Research Advisor: Prof. <a href="https://lucassheng.github.io" target="_blank">Lu Sheng</a>
+            </td>
+          </tr>
+
+          <tr>
+            <br>
+            <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img
+                src="images/logo/buaa_logo.jpg" , width="120"></td>
+            <td width="90%" valign="center">
+              <b><a href="https://soft.buaa.edu.cn/" target="_blank">
+                  <papertitle>Beihang University (BUAA)</papertitle>
+                </a></b>
+              <br> <em>2020.09 - 2024.07</em>
+              <br> <b> Bachelor of Software Engineering</b>
+              <br> GPA ranking: <b>11</b>/187
+              <br> Research Advisor: Prof. <a href="https://lucassheng.github.io" target="_blank">Lu Sheng</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!-- Selected Awards and Honors -->
+      <table
+        style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+
+          <br>
+          <heading>Selected Awards and Honors</heading>
+
+          <br>
+          <td style="padding:0px;width:100%;vertical-align:middle">
+            <p>
+              <li>2024: Outstanding Graduate of Beihang University.</li>
+            </p>
+            <p>
+              <li>2023: Special Prize (Top 1) in "Challenge Cup" Competition of Science Achievement in China.</li>
+            </p>
+            <p>
+              <li>2017: Rank 1st/68k in National High School Entrance Examination of Shenzhen.</li>
+            </p>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!-- Aknowledgements -->
+      <table
+        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+          <tr>
+            <!-- <br> -->
+            <!-- <br> -->
+            <hr>
+            <p style="text-align:center">
+              This homepage is designed based on <a href="https://jonbarron.info/">Jon Barron</a>'s website and deployed
+              on
+              <a href="https://pages.github.com/">GitHub Pages</a>.
+
+              <br>
+              © 2025 Enshen Zhou
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</body>
+
+</html>
